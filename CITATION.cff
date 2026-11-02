@@ -3,6 +3,7 @@ message: "Please cite this version of Nurowerx Research Stack when using the sof
 type: software
 title: "Nurowerx Research Stack: TRACE, LOOP, LENS and FRAME"
 version: 0.1.0
+doi: 10.5281/zenodo.23898164
 date-released: 2026-11-02
 authors:
   - family-names: Walker
