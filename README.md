@@ -1,5 +1,7 @@
 # NUROWERX / RESEARCH STACK
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23898164.svg)](https://doi.org/10.5281/zenodo.23898164)
+
 **TRACE · LOOP · LENS · FRAME — From information to understanding.**
 
 An open-source research platform connecting information provenance, AI evaluation, scientific visualization, and human judgment. Version 0.1.0 is a local, working research workbench with deterministic synthetic evaluation targets, inspectable records and reproducible reports.
@@ -64,7 +66,7 @@ The papers document architecture, evaluation and benchmark construction. Public 
 
 This release does not establish human-user outcomes, general AI reliability, cryptographic authorship or independent-party replication. A hard interruption leaves an explicit running record requiring manual investigation. The interface uses bounded views; the stress fixture does not establish production capacity. SQLite is the validated storage target. [Security](SECURITY.md) describes access and integrity limits.
 
-Cite Spencer H. Walker, *Nurowerx Research Stack*, version 0.1.0, Nurowerx, 2026, https://github.com/Nurowerx/research-stack. Machine-readable metadata is in [CITATION.cff](CITATION.cff) and [codemeta.json](codemeta.json). No DOI is claimed until one is issued and verified; archival metadata and the outstanding access step are in [research/archive](research/archive/README.md).
+Cite Spencer H. Walker, *Nurowerx Research Stack*, version 0.1.0, Nurowerx, 2026, https://github.com/Nurowerx/research-stack. Machine-readable metadata is in [CITATION.cff](CITATION.cff) and [codemeta.json](codemeta.json). Software v0.1.0 is archived on Zenodo: [10.5281/zenodo.23898164](https://doi.org/10.5281/zenodo.23898164), from the [SWALKERNURO release](https://github.com/SWALKERNURO/research-stack/releases/tag/v0.1.0). All-version DOI: [10.5281/zenodo.23898163](https://doi.org/10.5281/zenodo.23898163). Separate dataset and paper DOIs have not been issued.
 
 Software: **MIT**. Original datasets and papers: **CC BY 4.0**. Third-party dependencies retain their own licenses. [Contributing](CONTRIBUTING.md) · [Governance](GOVERNANCE.md) · [Documentation index](docs/README.md).
 
