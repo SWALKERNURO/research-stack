@@ -1,1 +1,10 @@
-{"name":"@nurowerx/lens","version":"0.1.0","type":"module","exports":"./src/index.tsx","peerDependencies":{"react":">=19","d3":">=7"}}
+{
+  "name": "@nurowerx/lens",
+  "version": "0.1.1",
+  "type": "module",
+  "exports": "./src/index.tsx",
+  "peerDependencies": {
+    "react": ">=19",
+    "d3": ">=7"
+  }
+}

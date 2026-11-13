@@ -1,6 +1,18 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { mkdir, readFile } from "node:fs/promises";
+
+async function selectSeededBaseline(page: Page) {
+  await page
+    .getByLabel("Research project")
+    .selectOption({ label: "Evidence under revision" });
+  const evaluation = page.getByLabel("Active evaluation");
+  const baseline = evaluation.locator("option").filter({
+    hasText: /^first-match \/ development \/ [^/]+ \/ complete$/,
+  });
+  await expect(baseline).toHaveCount(1);
+  await evaluation.selectOption({ label: await baseline.innerText() });
+}
 
 test("Complete dataset, evaluation, provenance, correction, comparison and report workflow", async ({
   page,
@@ -149,9 +161,7 @@ test("Keyboard filtering and SVG export retain source measurements", async ({
   page,
 }) => {
   await page.goto("/");
-  await page
-    .getByLabel("Research project")
-    .selectOption({ label: "Evidence under revision" });
+  await selectSeededBaseline(page);
   const mark = page.getByRole("button", { name: /Filter Revision/ });
   await mark.focus();
   await page.keyboard.press("Enter");
@@ -208,9 +218,7 @@ test("Linked chart filters, evidence navigation, annotations and version history
   page,
 }) => {
   await page.goto("/");
-  await page
-    .getByLabel("Research project")
-    .selectOption({ label: "Evidence under revision" });
+  await selectSeededBaseline(page);
   await page.getByRole("button", { name: /Filter Revision/ }).click();
   await expect(page.getByLabel("Case family", { exact: true })).toHaveValue(
     "revision",
@@ -317,12 +325,12 @@ test("Capture actual interface screenshots", async ({ page }) => {
   const dir = process.env.NX_SCREENSHOTS || "docs/screenshots";
   await mkdir(dir, { recursive: true });
   await page.goto("/");
-  await page
-    .getByLabel("Research project")
-    .selectOption({ label: "Evidence under revision" });
-  await page
-    .getByRole("button", { name: "Inspect conflict-000 repeat 1" })
-    .click();
+  await selectSeededBaseline(page);
+  const conflict = page.getByRole("button", {
+    name: "Inspect conflict-000 repeat 1",
+  });
+  await expect(conflict).toBeVisible();
+  await conflict.click();
   await page.waitForTimeout(500);
   await page.screenshot({
     path: `${dir}/research-overview.png`,

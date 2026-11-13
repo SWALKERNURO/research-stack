@@ -1033,7 +1033,7 @@ export default function App() {
               >
                 <Settings2 size={14} /> Access & attribution
               </button>
-              <span className="version">RESEARCH STACK / 0.1.0</span>
+              <span className="version">RESEARCH STACK / 0.1.1</span>
             </div>
           </>
         }

@@ -4,11 +4,28 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    groups:
+      vite-toolchain:
+        patterns:
+          - vite
+          - "@vitejs/plugin-react"
+          - vitest
   - package-ecosystem: pip
     directory: /
     schedule:
       interval: weekly
+    groups:
+      pydantic:
+        patterns:
+          - pydantic
+          - pydantic-core
+          - pydantic_core
+          - typing-inspection
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
+    groups:
+      codeql:
+        patterns:
+          - github/codeql-action/*
