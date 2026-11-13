@@ -11,10 +11,9 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "types": ["vite/client", "node"],
-    "baseUrl": ".",
     "paths": {
-      "@nurowerx/lens": ["packages/nx-lens/src/index.tsx"],
-      "@nurowerx/frame": ["packages/nx-frame/src/index.tsx"]
+      "@nurowerx/lens": ["./packages/nx-lens/src/index.tsx"],
+      "@nurowerx/frame": ["./packages/nx-frame/src/index.tsx"]
     }
   },
   "include": [

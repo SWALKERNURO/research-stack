@@ -1,6 +1,6 @@
 {
   "name": "nurowerx-research-stack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -20,9 +20,9 @@
     "@fontsource/ibm-plex-mono": "^5.2.0",
     "@fontsource/inter": "^5.2.0",
     "@fontsource/manrope": "^5.2.0",
-    "@tanstack/react-query": "^5.90.0",
-    "d3": "^7.9.0",
-    "lucide-react": "^0.468.0",
+    "@tanstack/react-query": "5.107.1",
+    "d3": "7.9.2",
+    "lucide-react": "1.70.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
@@ -30,13 +30,13 @@
     "@axe-core/playwright": "^4.11.0",
     "@playwright/test": "^1.56.0",
     "@types/d3": "^7.4.0",
-    "@types/node": "^22.0.0",
+    "@types/node": "26.6.6",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
-    "@vitejs/plugin-react": "^5.1.0",
-    "prettier": "3.6.2",
-    "typescript": "^5.9.0",
-    "vite": "^7.3.0",
-    "vitest": "^4.0.0"
+    "@vitejs/plugin-react": "6.3.0",
+    "prettier": "3.9.10",
+    "typescript": "7.0.2",
+    "vite": "8.3.7",
+    "vitest": "5.1.0"
   }
 }

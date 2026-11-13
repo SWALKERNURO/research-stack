@@ -1,10 +1,6 @@
 import type { ReactNode, CSSProperties } from "react";
 export type WorkspaceView =
-  | "overview"
-  | "evaluations"
-  | "evidence"
-  | "datasets"
-  | "reviews";
+  "overview" | "evaluations" | "evidence" | "datasets" | "reviews";
 export interface WorkspaceLayout {
   view: WorkspaceView;
   inspector_width: number;

@@ -69,7 +69,7 @@ def create_app(trace=None, static_dir=None, reader_token=None, writer_token=None
     loop = LoopEngine(trace)
     app = FastAPI(
         title="Nurowerx Research Stack",
-        version="0.1.0",
+        version="0.1.1",
         description="TRACE provenance and LOOP evaluation API. Baseline results are synthetic policy measurements.",
     )
     app.state.trace = trace
@@ -144,7 +144,7 @@ def create_app(trace=None, static_dir=None, reader_token=None, writer_token=None
     def health():
         return {
             "status": "ok",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "mode": "token access" if writer_token else "trusted local workspace",
             "synthetic_baseline": True,
         }
